@@ -62,4 +62,11 @@ mainCtrl.controller('iglobalCtrl', function($scope, $http, $timeout) {
         $scope.datasetData = unflatten( nodes );   
     });
 
+
+$scope.selectDataset = function(dataset){
+        for(var i = 0;i<dataset.children.length;i++){
+          dataset.children[i].isChecked=dataset.isChecked;
+        }
+    }
 });
+
